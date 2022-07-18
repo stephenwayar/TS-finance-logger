@@ -1,4 +1,4 @@
-const form = document.querySelector('.new-item-form') as HTMLFormElement;
+const form = document.querySelector('.new-item-form') as HTMLFormElement
 
 const type = document.querySelector('#type') as HTMLSelectElement
 
@@ -18,3 +18,38 @@ form.addEventListener('submit', (e: Event) : void => {
     amount.value
   )
 })
+
+// function types
+const myFunction = (param: number): number => {
+  return param + 1
+}
+
+const anotherFunction: Function = (a: number, b: string): void => {
+  console.log(a, b)
+}
+
+console.log(anotherFunction(28, 'mike'))
+
+// array types
+let names: any[] = [];
+
+names = [3, 4, 4, true, false]
+
+names.push('sarah')
+
+let elements: (string | number)[] = ['name', 'age', 5]
+
+//  object types
+let obj: any;
+
+obj = {
+  name: 'luke',
+  age: 44,
+  adult: true
+}
+
+obj.pet = 'cat'
+
+console.log(
+  obj
+)
